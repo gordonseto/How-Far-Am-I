@@ -12,8 +12,11 @@
 @interface ViewController : UIViewController <CLLocationManagerDelegate>
 
 @property (nonatomic, strong) IBOutlet UILabel *timeLabel;
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 @property (nonatomic, retain) CLLocationManager *locationManager;
+
+- (IBAction)onAddButtonTapped:(id)sender;
 
 @end
 

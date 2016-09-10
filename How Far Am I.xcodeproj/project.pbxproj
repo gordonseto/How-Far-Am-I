@@ -13,6 +13,7 @@
 		8E476CE31D84AB66000EE97A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E476CE11D84AB66000EE97A /* Main.storyboard */; };
 		8E476CE51D84AB66000EE97A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E476CE41D84AB66000EE97A /* Assets.xcassets */; };
 		8E476CE81D84AB66000EE97A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E476CE61D84AB66000EE97A /* LaunchScreen.storyboard */; };
+		D7CBF3BF0BC423D3C4FAB359 /* libPods-How Far Am I.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE714318205937222817CD96 /* libPods-How Far Am I.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		8E476CE41D84AB66000EE97A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E476CE71D84AB66000EE97A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E476CE91D84AB66000EE97A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B774D8DF485F8A4BECDEBCA4 /* Pods-How Far Am I.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-How Far Am I.debug.xcconfig"; path = "Pods/Target Support Files/Pods-How Far Am I/Pods-How Far Am I.debug.xcconfig"; sourceTree = "<group>"; };
+		CE714318205937222817CD96 /* libPods-How Far Am I.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-How Far Am I.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB452BAEC91E317A41F1A07A /* Pods-How Far Am I.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-How Far Am I.release.xcconfig"; path = "Pods/Target Support Files/Pods-How Far Am I/Pods-How Far Am I.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7CBF3BF0BC423D3C4FAB359 /* libPods-How Far Am I.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FCF13F5069DEF62A405F514 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE714318205937222817CD96 /* libPods-How Far Am I.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8E476CCC1D84AB66000EE97A = {
 			isa = PBXGroup;
 			children = (
 				8E476CD71D84AB66000EE97A /* How Far Am I */,
 				8E476CD61D84AB66000EE97A /* Products */,
+				E377718735649D9793C85CBD /* Pods */,
+				3FCF13F5069DEF62A405F514 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +94,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E377718735649D9793C85CBD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B774D8DF485F8A4BECDEBCA4 /* Pods-How Far Am I.debug.xcconfig */,
+				DB452BAEC91E317A41F1A07A /* Pods-How Far Am I.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E476CEC1D84AB66000EE97A /* Build configuration list for PBXNativeTarget "How Far Am I" */;
 			buildPhases = (
+				E0B0D90D4E6A08B8E0805C8D /* [CP] Check Pods Manifest.lock */,
 				8E476CD11D84AB66000EE97A /* Sources */,
 				8E476CD21D84AB66000EE97A /* Frameworks */,
 				8E476CD31D84AB66000EE97A /* Resources */,
+				9B82C4F48F5744EB69BA7851 /* [CP] Embed Pods Frameworks */,
+				0164475A0425A6C1CB84154E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,6 +170,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0164475A0425A6C1CB84154E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-How Far Am I/Pods-How Far Am I-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B82C4F48F5744EB69BA7851 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-How Far Am I/Pods-How Far Am I-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0B0D90D4E6A08B8E0805C8D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8E476CD11D84AB66000EE97A /* Sources */ = {
@@ -261,6 +336,7 @@
 		};
 		8E476CED1D84AB66000EE97A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B774D8DF485F8A4BECDEBCA4 /* Pods-How Far Am I.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "How Far Am I/Info.plist";
@@ -272,6 +348,7 @@
 		};
 		8E476CEE1D84AB66000EE97A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB452BAEC91E317A41F1A07A /* Pods-How Far Am I.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "How Far Am I/Info.plist";
@@ -300,6 +377,7 @@
 				8E476CEE1D84AB66000EE97A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

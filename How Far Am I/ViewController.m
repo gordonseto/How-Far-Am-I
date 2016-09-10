@@ -18,12 +18,16 @@ CLLocation *currentLocation;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    self.tableView.scrollEnabled = YES;
+    self.tableView.alwaysBounceVertical = YES;
+    self.tableView.delaysContentTouches = NO;
+    
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
 
-    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
     
     [self getLocation];
 }
@@ -65,6 +69,10 @@ CLLocation *currentLocation;
     } else {
         NSLog(@"did not work");
     }
+}
+
+- (void)onAddButtonTapped:(id)sender {
+    NSLog(@"wat");
 }
 
 @end
