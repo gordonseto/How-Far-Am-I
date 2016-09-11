@@ -8,5 +8,6 @@ target 'How Far Am I' do
   # Pods for How Far Am I
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'AFNetworking'
 
 end

@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "Location.h"
+
 @import GooglePlaces;
 
 @interface ViewController () <GMSAutocompleteFetcherDelegate>
@@ -90,6 +92,9 @@ didAutocompleteWithPlace:(GMSPlace *)place {
     NSLog(@"Place name %@", place.name);
     NSLog(@"Place address %@", place.formattedAddress);
     NSLog(@"Place attributions %@", place.attributions.string);
+    Location *location = [[Location alloc]initWithPlace:place.name :place.placeID];
+    NSLog(@"Test: %@", location.name);
+    NSLog(@"Test: %@", location.placeID);
 }
 
 - (void)viewController:(GMSAutocompleteViewController *)viewController
