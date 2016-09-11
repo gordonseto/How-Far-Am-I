@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E201CFC1D84C79C00D3122C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E201CFB1D84C79C00D3122C /* Constants.m */; };
 		8E476CDA1D84AB66000EE97A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E476CD91D84AB66000EE97A /* main.m */; };
 		8E476CDD1D84AB66000EE97A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E476CDC1D84AB66000EE97A /* AppDelegate.m */; };
 		8E476CE01D84AB66000EE97A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E476CDF1D84AB66000EE97A /* ViewController.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E201CFB1D84C79C00D3122C /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		8E201CFD1D84F3BF00D3122C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		8E476CD51D84AB66000EE97A /* How Far Am I.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "How Far Am I.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E476CD91D84AB66000EE97A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8E476CDB1D84AB66000EE97A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -52,6 +55,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8E201CFA1D84C78700D3122C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				8E201CFB1D84C79C00D3122C /* Constants.m */,
+				8E201CFD1D84F3BF00D3122C /* Constants.h */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		8E201D001D84F68800D3122C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E476CDE1D84AB66000EE97A /* ViewController.h */,
+				8E476CDF1D84AB66000EE97A /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8E201D011D84F6AD00D3122C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8E201D021D84F6B100D3122C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		8E476CCC1D84AB66000EE97A = {
 			isa = PBXGroup;
 			children = (
@@ -73,10 +108,12 @@
 		8E476CD71D84AB66000EE97A /* How Far Am I */ = {
 			isa = PBXGroup;
 			children = (
+				8E201CFA1D84C78700D3122C /* Util */,
+				8E201D021D84F6B100D3122C /* Model */,
+				8E201D011D84F6AD00D3122C /* View */,
+				8E201D001D84F68800D3122C /* Controller */,
 				8E476CDB1D84AB66000EE97A /* AppDelegate.h */,
 				8E476CDC1D84AB66000EE97A /* AppDelegate.m */,
-				8E476CDE1D84AB66000EE97A /* ViewController.h */,
-				8E476CDF1D84AB66000EE97A /* ViewController.m */,
 				8E476CE11D84AB66000EE97A /* Main.storyboard */,
 				8E476CE41D84AB66000EE97A /* Assets.xcassets */,
 				8E476CE61D84AB66000EE97A /* LaunchScreen.storyboard */,
@@ -227,6 +264,7 @@
 				8E476CE01D84AB66000EE97A /* ViewController.m in Sources */,
 				8E476CDD1D84AB66000EE97A /* AppDelegate.m in Sources */,
 				8E476CDA1D84AB66000EE97A /* main.m in Sources */,
+				8E201CFC1D84C79C00D3122C /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
