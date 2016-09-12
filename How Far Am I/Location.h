@@ -14,5 +14,6 @@
 @property (nonatomic, strong) NSString *placeID;
 
 -(id)initWithPlace:(NSString *)name:(NSString *)placeID;
+-(void)getDirections;
 
 @end

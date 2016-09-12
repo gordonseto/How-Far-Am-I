@@ -7,3 +7,4 @@
 //
 
 NSString *const GOOGLE_API_KEY = @"AIzaSyCeOfFZuudydE-5-dk8h-XLN7pUAn2cimo";
+NSString *const GOOGLE_DIRECTIONS_KEY = @"AIzaSyC0yLxw6ZqpTLF7DRjR4HlLRRAHNgxKHLw";

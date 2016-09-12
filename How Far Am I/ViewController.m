@@ -95,6 +95,7 @@ didAutocompleteWithPlace:(GMSPlace *)place {
     Location *location = [[Location alloc]initWithPlace:place.name :place.placeID];
     NSLog(@"Test: %@", location.name);
     NSLog(@"Test: %@", location.placeID);
+    [location getDirections];
 }
 
 - (void)viewController:(GMSAutocompleteViewController *)viewController

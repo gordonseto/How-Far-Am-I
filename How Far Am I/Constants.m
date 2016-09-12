@@ -9,3 +9,4 @@
 #import <Foundation/Foundation.h>
 
 extern NSString const *GOOGLE_API_KEY;
+extern NSString const *GOOGLE_DIRECTIONS_KEY;
