@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Location.h"
 #import "Direction.h"
+#import "LocationCell.h"
 
 @import GooglePlaces;
 
@@ -73,7 +74,12 @@ NSMutableArray *locations;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    LocationCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LocationCell" forIndexPath:indexPath];
+    Location *location = [locations objectAtIndex:indexPath.row];
+    if (currentLocation != nil) {
+        [cell configureCellWithLocation:location currentLocation:currentLocation];
+    }
+    return cell;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -120,13 +126,15 @@ didAutocompleteWithPlace:(GMSPlace *)place {
 
     [locations addObject:location];
     
-    [location getDirectionsFromLocation:currentLocation completion:^(NSMutableArray * directions) {
-        for (Direction *direction in directions){
-            NSLog(direction.busNumber);
-            NSLog(direction.departureTime);
-            NSLog(direction.arrivalTime);
-        }
-    }];
+    [self.tableView reloadData];
+    
+//    [location getDirectionsFromLocation:currentLocation completion:^(NSMutableArray * directions) {
+//        for (Direction *direction in directions){
+//            NSLog(direction.busNumber);
+//            NSLog(direction.departureTime);
+//            NSLog(direction.arrivalTime);
+//        }
+//    }];
 }
 
 - (void)viewController:(GMSAutocompleteViewController *)viewController

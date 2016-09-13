@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+#import "Direction.h"
 
 @interface Location: NSObject
 
@@ -17,5 +18,6 @@
 
 -(id)initWithPlace:(NSString *)name:(NSString *)placeID;
 -(void)getDirectionsFromLocation:(CLLocation*)location completion:(void (^)(NSMutableArray*))completionHandler;
+-(void)getEarliestDirectionFromCurrentLocation:(CLLocation*)currentLocation completion:(void (^)(Direction*)) completionHandler;
 
 @end

@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSString *arrivalTime;
 @property (nonatomic, strong) NSString *busNumber;
 @property (nonatomic, strong) NSString *type;
+@property (nonatomic, strong) NSString *duration;
 
 -(id)initWithDepartureTime:(NSString *)departureTime arrivalTime:(NSString *)arrivalTime busNumber:(NSString *)busNumber type:(NSString *)type;
 

@@ -15,9 +15,10 @@
 		8E476CE31D84AB66000EE97A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E476CE11D84AB66000EE97A /* Main.storyboard */; };
 		8E476CE51D84AB66000EE97A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E476CE41D84AB66000EE97A /* Assets.xcassets */; };
 		8E476CE81D84AB66000EE97A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E476CE61D84AB66000EE97A /* LaunchScreen.storyboard */; };
-		8EC84C5E1D87CCA60044E0E7 /* UITableViewCell+LocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC84C5D1D87CCA60044E0E7 /* UITableViewCell+LocationCell.m */; };
 		8ED551CF1D872D490041EF68 /* DataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED551CE1D872D490041EF68 /* DataService.m */; };
 		8ED551D31D8779E90041EF68 /* Direction.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED551D21D8779E90041EF68 /* Direction.m */; };
+		8ED551D61D887A430041EF68 /* LocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED551D51D887A430041EF68 /* LocationCell.m */; };
+		8ED551D81D8881D00041EF68 /* General.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED551D71D8881D00041EF68 /* General.m */; };
 		D7CBF3BF0BC423D3C4FAB359 /* libPods-How Far Am I.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE714318205937222817CD96 /* libPods-How Far Am I.a */; };
 /* End PBXBuildFile section */
 
@@ -36,12 +37,14 @@
 		8E476CE41D84AB66000EE97A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E476CE71D84AB66000EE97A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E476CE91D84AB66000EE97A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8EC84C5C1D87CCA60044E0E7 /* UITableViewCell+LocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+LocationCell.h"; sourceTree = "<group>"; };
-		8EC84C5D1D87CCA60044E0E7 /* UITableViewCell+LocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+LocationCell.m"; sourceTree = "<group>"; };
 		8ED551CE1D872D490041EF68 /* DataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataService.m; sourceTree = "<group>"; };
 		8ED551D01D872D530041EF68 /* DataService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataService.h; sourceTree = "<group>"; };
 		8ED551D11D8779DA0041EF68 /* Direction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Direction.h; sourceTree = "<group>"; };
 		8ED551D21D8779E90041EF68 /* Direction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Direction.m; sourceTree = "<group>"; };
+		8ED551D41D887A350041EF68 /* LocationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationCell.h; sourceTree = "<group>"; };
+		8ED551D51D887A430041EF68 /* LocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationCell.m; sourceTree = "<group>"; };
+		8ED551D71D8881D00041EF68 /* General.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = General.m; sourceTree = "<group>"; };
+		8ED551D91D8881D80041EF68 /* General.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = General.h; sourceTree = "<group>"; };
 		B774D8DF485F8A4BECDEBCA4 /* Pods-How Far Am I.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-How Far Am I.debug.xcconfig"; path = "Pods/Target Support Files/Pods-How Far Am I/Pods-How Far Am I.debug.xcconfig"; sourceTree = "<group>"; };
 		CE714318205937222817CD96 /* libPods-How Far Am I.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-How Far Am I.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB452BAEC91E317A41F1A07A /* Pods-How Far Am I.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-How Far Am I.release.xcconfig"; path = "Pods/Target Support Files/Pods-How Far Am I/Pods-How Far Am I.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +77,8 @@
 				8E201CFB1D84C79C00D3122C /* Constants.m */,
 				8ED551D01D872D530041EF68 /* DataService.h */,
 				8ED551CE1D872D490041EF68 /* DataService.m */,
+				8ED551D91D8881D80041EF68 /* General.h */,
+				8ED551D71D8881D00041EF68 /* General.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -90,8 +95,8 @@
 		8E201D011D84F6AD00D3122C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8EC84C5C1D87CCA60044E0E7 /* UITableViewCell+LocationCell.h */,
-				8EC84C5D1D87CCA60044E0E7 /* UITableViewCell+LocationCell.m */,
+				8ED551D41D887A350041EF68 /* LocationCell.h */,
+				8ED551D51D887A430041EF68 /* LocationCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -283,12 +288,13 @@
 			files = (
 				8E476CE01D84AB66000EE97A /* ViewController.m in Sources */,
 				8E201D051D85D9FC00D3122C /* Location.m in Sources */,
+				8ED551D61D887A430041EF68 /* LocationCell.m in Sources */,
 				8E476CDD1D84AB66000EE97A /* AppDelegate.m in Sources */,
 				8ED551CF1D872D490041EF68 /* DataService.m in Sources */,
 				8ED551D31D8779E90041EF68 /* Direction.m in Sources */,
 				8E476CDA1D84AB66000EE97A /* main.m in Sources */,
-				8EC84C5E1D87CCA60044E0E7 /* UITableViewCell+LocationCell.m in Sources */,
 				8E201CFC1D84C79C00D3122C /* Constants.m in Sources */,
+				8ED551D81D8881D00041EF68 /* General.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

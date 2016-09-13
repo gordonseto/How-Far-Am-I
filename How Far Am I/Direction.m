@@ -13,6 +13,14 @@
     //private instance variables
 }
 
+-(NSString*)busNumber {
+    if ([_busNumber characterAtIndex:0] == '0') {
+        return [_busNumber substringFromIndex:1];
+    } else {
+        return _busNumber;
+    }
+}
+
 -(id)initWithDepartureTime:(NSString *)departureTime arrivalTime:(NSString *)arrivalTime busNumber:(NSString *)busNumber type:(NSString *)type{
     self = [super init];
     

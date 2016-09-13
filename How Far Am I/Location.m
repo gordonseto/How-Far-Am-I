@@ -26,6 +26,14 @@
     return self;
 }
 
+-(void)getEarliestDirectionFromCurrentLocation:(CLLocation*)currentLocation completion:(void (^)(Direction*)) completionHandler{
+    [self getDirectionsFromLocation:currentLocation completion:^(NSMutableArray *directions) {
+        if  (self.directions != nil && self.directions.count > 0) {
+            completionHandler([directions objectAtIndex:0]);
+        }
+    }];
+}
+
 -(void)getDirectionsFromLocation:(CLLocation*)location completion:(void (^)(NSMutableArray*))completionHandler {
     if (_name == nil) { return; }
     if (_placeID == nil) { return; }
