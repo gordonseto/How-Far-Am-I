@@ -23,8 +23,13 @@ int const LONGITUDE_BOUND = 0.035;
 
 CLLocation *currentLocation;
 
+NSMutableArray *locations;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
     
     self.tableView.scrollEnabled = YES;
     self.tableView.alwaysBounceVertical = YES;
@@ -35,6 +40,8 @@ CLLocation *currentLocation;
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
 
     [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
+    
+    locations = [[NSMutableArray alloc]init];
     
     [self getLocation];
 }
@@ -63,6 +70,18 @@ CLLocation *currentLocation;
     } else {
         NSLog(@"did not work");
     }
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return locations.count;
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
 }
 
 - (void)onAddButtonTapped:(id)sender {
@@ -99,6 +118,8 @@ didAutocompleteWithPlace:(GMSPlace *)place {
     
     Location *location = [[Location alloc]initWithPlace:place.name :place.placeID];
 
+    [locations addObject:location];
+    
     [location getDirectionsFromLocation:currentLocation completion:^(NSMutableArray * directions) {
         for (Direction *direction in directions){
             NSLog(direction.busNumber);
