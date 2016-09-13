@@ -11,6 +11,6 @@
 @interface DataService : NSObject
 
 +(id)instance;
--(void)urlRequest:(NSURL*)url;
+-(void)urlRequestWithUrl:(NSURL*)url completion:(void (^)(id response))completionBlock;
 
 @end

@@ -23,7 +23,7 @@
     return sharedInstance;
 }
 
--(void)urlRequest:(NSURL*)url{
+-(void)urlRequestWithUrl:(NSURL*)url completion:(void (^)(id response))completionBlock{
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     
@@ -33,7 +33,8 @@
         if (error) {
             NSLog(@"Error: %@", error);
         } else {
-            NSLog(@"%@ %@", response, responseObject);
+            //NSLog(@"%@ %@", response, responseObject);
+            completionBlock(responseObject);
         }
     }];
     [dataTask resume];

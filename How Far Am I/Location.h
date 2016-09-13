@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface Location: NSObject
 
@@ -14,6 +15,6 @@
 @property (nonatomic, strong) NSString *placeID;
 
 -(id)initWithPlace:(NSString *)name:(NSString *)placeID;
--(void)getDirections;
+-(void)getDirectionsFromLocation:(CLLocation*)location;
 
 @end

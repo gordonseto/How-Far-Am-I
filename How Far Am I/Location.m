@@ -9,6 +9,8 @@
 #import "Location.h"
 #import "AFNetworking.h"
 #import "DataService.h"
+#import <CoreLocation/CoreLocation.h>
+#import "Constants.h"
 
 @implementation Location {
     //private instance variables
@@ -23,13 +25,26 @@
     return self;
 }
 
--(void)getDirections {
+-(void)getDirectionsFromLocation:(CLLocation*)location {
     if (_name == nil) { return; }
     if (_placeID == nil) { return; }
+    if (location == nil) { return; }
     
-    NSURL *url = [NSURL URLWithString:@"https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal+Studios+Hollywood4&key=AIzaSyC0yLxw6ZqpTLF7DRjR4HlLRRAHNgxKHLw"];
+    NSString *urlString = [NSString stringWithFormat:@"%@%@%f%@%f%@%@%@%@%@%@", GOOGLE_BASE, @"origin=", location.coordinate.latitude, @",", location.coordinate.longitude, @"&destination=place_id:", _placeID, @"&key=", GOOGLE_DIRECTIONS_KEY, @"&alternatives=true", @"&mode=transit"];
     
-    [[DataService instance] urlRequest:url];
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    [[DataService instance] urlRequestWithUrl:url completion:^(id response) {
+        //NSLog(@"%@", response);
+        [self parseResponseWithResponse:response];
+    }];
+}
+
+-(void)parseResponseWithResponse:(id)response {
+    NSMutableArray *routes = [response objectForKey:@"routes"];
+    for (int i = 0; i < routes.count; i++){
+        NSDictionary *route = [routes objectAtIndex:i];
+    }
 }
 
 @end

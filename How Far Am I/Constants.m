@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Constants.h"
 
-extern NSString const *GOOGLE_API_KEY;
-extern NSString const *GOOGLE_DIRECTIONS_KEY;
+NSString *const GOOGLE_API_KEY = @"AIzaSyCeOfFZuudydE-5-dk8h-XLN7pUAn2cimo";
+NSString *const GOOGLE_DIRECTIONS_KEY = @"AIzaSyC0yLxw6ZqpTLF7DRjR4HlLRRAHNgxKHLw";
+NSString *const GOOGLE_BASE = @"https://maps.googleapis.com/maps/api/directions/json?";
