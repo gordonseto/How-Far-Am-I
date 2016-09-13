@@ -13,11 +13,11 @@
     //private instance variables
 }
 
--(id)initWithDepartureTime:(NSString *)departureTime :(NSInteger *)duration :(NSString *)busNumber :(NSString *)type{
+-(id)initWithDepartureTime:(NSString *)departureTime arrivalTime:(NSString *)arrivalTime busNumber:(NSString *)busNumber type:(NSString *)type{
     self = [super init];
     
     _departureTime = departureTime;
-    _duration = duration;
+    _arrivalTime = arrivalTime;
     _busNumber = busNumber;
     _type = type;
     

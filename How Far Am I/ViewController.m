@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Location.h"
+#import "Direction.h"
 
 @import GooglePlaces;
 
@@ -95,14 +96,16 @@ CLLocation *currentLocation;
 - (void)viewController:(GMSAutocompleteViewController *)viewController
 didAutocompleteWithPlace:(GMSPlace *)place {
     [self dismissViewControllerAnimated:YES completion:nil];
-    // Do something with the selected place.
-//    NSLog(@"Place name %@", place.name);
-//    NSLog(@"Place address %@", place.formattedAddress);
-//    NSLog(@"Place attributions %@", place.attributions.string);
+    
     Location *location = [[Location alloc]initWithPlace:place.name :place.placeID];
-//    NSLog(@"Test: %@", location.name);
-//    NSLog(@"Test: %@", location.placeID);
-    [location getDirectionsFromLocation:currentLocation];
+
+    [location getDirectionsFromLocation:currentLocation completion:^(NSMutableArray * directions) {
+        for (Direction *direction in directions){
+            NSLog(direction.busNumber);
+            NSLog(direction.departureTime);
+            NSLog(direction.arrivalTime);
+        }
+    }];
 }
 
 - (void)viewController:(GMSAutocompleteViewController *)viewController

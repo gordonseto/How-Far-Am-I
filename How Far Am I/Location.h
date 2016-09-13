@@ -13,8 +13,9 @@
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *placeID;
+@property (nonatomic, strong) NSMutableArray *directions;
 
 -(id)initWithPlace:(NSString *)name:(NSString *)placeID;
--(void)getDirectionsFromLocation:(CLLocation*)location;
+-(void)getDirectionsFromLocation:(CLLocation*)location completion:(void (^)(NSMutableArray*))completionHandler;
 
 @end

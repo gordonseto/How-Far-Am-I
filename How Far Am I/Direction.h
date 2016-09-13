@@ -12,10 +12,10 @@
 @interface Direction: NSObject
 
 @property (nonatomic, strong) NSString *departureTime;
-@property NSInteger *duration;
+@property (nonatomic, strong) NSString *arrivalTime;
 @property (nonatomic, strong) NSString *busNumber;
 @property (nonatomic, strong) NSString *type;
 
--(id)initWithDepartureTime:(NSString*)departureTime :(NSInteger*)duration :(NSString*)busNumber :(NSString*)type;
+-(id)initWithDepartureTime:(NSString *)departureTime arrivalTime:(NSString *)arrivalTime busNumber:(NSString *)busNumber type:(NSString *)type;
 
 @end
