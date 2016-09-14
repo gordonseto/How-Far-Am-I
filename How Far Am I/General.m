@@ -10,8 +10,8 @@
 
 @implementation General
 
-+(NSString*)convertHoursToMinutes:(NSString*)time {
-    return @" ";
++(NSString*)stringFromTimeInterval:(NSTimeInterval)time{
+    return @"";
 }
 
 @end

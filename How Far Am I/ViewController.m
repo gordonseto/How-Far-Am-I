@@ -32,6 +32,10 @@ NSMutableArray *locations;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
+    self.refreshControl = [[UIRefreshControl alloc]init];
+    [self.refreshControl addTarget:self action:@selector(refreshView) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl.tintColor = UIColor.whiteColor;
+    [self.tableView addSubview:self.refreshControl];
     self.tableView.scrollEnabled = YES;
     self.tableView.alwaysBounceVertical = YES;
     self.tableView.delaysContentTouches = NO;
@@ -105,6 +109,11 @@ NSMutableArray *locations;
     self.timeLabel.text = time;
 }
 
+-(void)refreshView {
+    [self.tableView reloadData];
+    [self.refreshControl endRefreshing];
+}
+
 - (void)showGoogleAutoComplete {
     GMSAutocompleteViewController *autocompleteController = [[GMSAutocompleteViewController alloc] init];
     autocompleteController.delegate = self;
@@ -127,6 +136,7 @@ didAutocompleteWithPlace:(GMSPlace *)place {
     [locations addObject:location];
     
     [self.tableView reloadData];
+    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:(locations.count - 1) inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
     
 //    [location getDirectionsFromLocation:currentLocation completion:^(NSMutableArray * directions) {
 //        for (Direction *direction in directions){

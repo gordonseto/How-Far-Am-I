@@ -10,6 +10,6 @@
 
 @interface General : NSObject
 
-+(NSString*)convertHoursToMinutes:(NSString*)time;
++(NSString*)stringFromTimeInterval:(NSTimeInterval)time;
 
 @end

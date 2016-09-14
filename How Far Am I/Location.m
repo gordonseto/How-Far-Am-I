@@ -45,6 +45,7 @@
     
     [[DataService instance] urlRequestWithUrl:url completion:^(id response) {
         //NSLog(@"%@", response);
+        NSLog(urlString);
         completionHandler([self parseResponse:response]);
     }];
 }
@@ -60,20 +61,25 @@
         Direction *direction;
         NSMutableArray *legs = [route objectForKey:@"legs"];
         NSDictionary *leg = [legs objectAtIndex:0];
-        NSString *arrivalTime = [[leg objectForKey:@"arrival_time"] objectForKey:@"text"];
+        NSString *arrivalTime = [[leg objectForKey:@"arrival_time"] objectForKey:@"value"];
         NSMutableArray *steps = [leg objectForKey:@"steps"];
         for (NSDictionary *step in steps){
             NSString *travelMode = [step objectForKey:@"travel_mode"];
             if ([travelMode isEqualToString:@"TRANSIT"]) {
                 NSString *busNumber = [[[step objectForKey:@"transit_details"] objectForKey:@"line"] objectForKey:@"short_name"];
-                NSString *departureTime = [[[step objectForKey:@"transit_details"] objectForKey:@"departure_time"] objectForKey:@"text"];
-                direction = [[Direction alloc]initWithDepartureTime:departureTime arrivalTime:arrivalTime busNumber:busNumber type:@"TRANSIT"];
+                NSString *departureTime = [[[step objectForKey:@"transit_details"] objectForKey:@"departure_time"] objectForKey:@"value"];
+                direction = [[Direction alloc]initWithDepartureTime:[departureTime doubleValue] arrivalTime:[arrivalTime doubleValue] busNumber:busNumber type:@"TRANSIT"];
                 break;
             }
         }
-        if (direction != nil){
-            [self.directions addObject:direction];
+        if (direction == nil){
+            NSDictionary *leg = [[route objectForKey:@"legs"] objectAtIndex:0];
+            NSString *duration = [[leg objectForKey:@"duration"] objectForKey:@"value"];
+            direction = [[Direction alloc]initWithDepartureTime:0 arrivalTime:0 busNumber:@"" type:@"WALKING"];
+            direction.duration = [duration doubleValue];
+            
         }
+        [self.directions addObject:direction];
     }
     return self.directions;
 }

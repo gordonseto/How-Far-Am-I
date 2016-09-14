@@ -21,8 +21,12 @@
     }
     [location getEarliestDirectionFromCurrentLocation:currentLocation completion:^(Direction *direction) {
         if (direction != nil) {
-            self.timeLabel.text = direction.arrivalTime;
-            self.busLabel.text = [NSString stringWithFormat:@"By %@ At %@", direction.busNumber, direction.departureTime];
+            self.timeLabel.text = [NSString stringWithFormat:@"%f", direction.duration];
+            if ([direction.type  isEqual: @"WALKING"]) {
+                self.busLabel.text = @"Walking";
+            } else {
+                self.busLabel.text = [NSString stringWithFormat:@"By %@ At %f", direction.busNumber,direction.departureTime];
+            }
         }
     }];
 }

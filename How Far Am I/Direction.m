@@ -21,11 +21,12 @@
     }
 }
 
--(id)initWithDepartureTime:(NSString *)departureTime arrivalTime:(NSString *)arrivalTime busNumber:(NSString *)busNumber type:(NSString *)type{
+-(id)initWithDepartureTime:(NSTimeInterval)departureTime arrivalTime:(NSTimeInterval)arrivalTime busNumber:(NSString *)busNumber type:(NSString *)type{
     self = [super init];
     
     _departureTime = departureTime;
     _arrivalTime = arrivalTime;
+    _duration = arrivalTime - departureTime;
     _busNumber = busNumber;
     _type = type;
     

@@ -43,50 +43,68 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RmV-00-Z0h">
                                                     <rect key="frame" x="8" y="39" width="412" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="cad-UA-C0S"/>
+                                                        <constraint firstAttribute="height" constant="45" id="cad-UA-C0S"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScY-ds-iCs">
-                                                    <rect key="frame" x="428" y="39" width="149" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="149" id="JFB-CD-Aps"/>
-                                                        <constraint firstAttribute="height" constant="21" id="vLy-cD-kuO"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1D-ay-gRF">
-                                                    <rect key="frame" x="425" y="65" width="149" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="149" id="BaS-Qc-vvV"/>
-                                                        <constraint firstAttribute="width" constant="149" id="NQI-vX-fUi"/>
-                                                        <constraint firstAttribute="height" constant="21" id="UaC-XO-Znb"/>
-                                                        <constraint firstAttribute="height" constant="21" id="cyn-x9-e31"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
-                                                            <exclude reference="BaS-Qc-vvV"/>
-                                                            <exclude reference="cyn-x9-e31"/>
+                                                            <exclude reference="cad-UA-C0S"/>
                                                         </mask>
                                                     </variation>
                                                 </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="afj-sU-Ig9">
+                                                    <rect key="frame" x="428" y="39" width="149" height="42"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScY-ds-iCs">
+                                                            <rect key="frame" x="0.0" y="0.0" width="149" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="149" id="JFB-CD-Aps"/>
+                                                                <constraint firstAttribute="height" constant="21" id="vLy-cD-kuO"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1D-ay-gRF">
+                                                            <rect key="frame" x="0.0" y="21" width="149" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="149" id="BaS-Qc-vvV"/>
+                                                                <constraint firstAttribute="width" constant="149" id="NQI-vX-fUi"/>
+                                                                <constraint firstAttribute="height" constant="21" id="UaC-XO-Znb"/>
+                                                                <constraint firstAttribute="height" constant="21" id="cyn-x9-e31"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="BaS-Qc-vvV"/>
+                                                                    <exclude reference="cyn-x9-e31"/>
+                                                                </mask>
+                                                            </variation>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="149" id="dmp-Vb-wFZ"/>
+                                                        <constraint firstAttribute="height" constant="42" id="qKp-SX-dbB"/>
+                                                    </constraints>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="ScY-ds-iCs" secondAttribute="trailing" id="Cpw-aY-iIW"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="afj-sU-Ig9" secondAttribute="trailing" id="EXG-4G-979"/>
                                                 <constraint firstItem="RmV-00-Z0h" firstAttribute="centerY" secondItem="6lD-qr-MZo" secondAttribute="centerY" id="L1r-ea-eew"/>
+                                                <constraint firstItem="afj-sU-Ig9" firstAttribute="centerY" secondItem="6lD-qr-MZo" secondAttribute="centerY" constant="4" id="Omw-iZ-maz"/>
                                                 <constraint firstItem="RmV-00-Z0h" firstAttribute="leading" secondItem="6lD-qr-MZo" secondAttribute="leadingMargin" id="bkE-SE-a1a"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="P1D-ay-gRF" secondAttribute="trailing" id="kXS-iy-gqP"/>
-                                                <constraint firstItem="ScY-ds-iCs" firstAttribute="centerY" secondItem="6lD-qr-MZo" secondAttribute="centerY" id="o6S-Xd-9vH"/>
-                                                <constraint firstItem="P1D-ay-gRF" firstAttribute="top" secondItem="ScY-ds-iCs" secondAttribute="bottom" id="p4p-Ne-QCo"/>
-                                                <constraint firstItem="ScY-ds-iCs" firstAttribute="leading" secondItem="RmV-00-Z0h" secondAttribute="trailing" constant="8" id="pCK-7i-eCo"/>
+                                                <constraint firstItem="afj-sU-Ig9" firstAttribute="leading" secondItem="RmV-00-Z0h" secondAttribute="trailing" constant="8" id="oJb-R4-rra"/>
+                                                <constraint firstItem="afj-sU-Ig9" firstAttribute="top" secondItem="RmV-00-Z0h" secondAttribute="top" id="rqf-1j-pap"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="Omw-iZ-maz"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>

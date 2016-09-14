@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong) IBOutlet UILabel *timeLabel;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
 
 @property (nonatomic, retain) CLLocationManager *locationManager;
 
