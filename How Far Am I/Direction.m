@@ -21,6 +21,22 @@
     }
 }
 
+-(NSString*)departureString {
+    if (_departureTime) {
+        return [General stringFromTimeInterval:_departureTime];
+    } else {
+        return @"";
+    }
+}
+
+-(NSString*)arrivalString {
+    if (_arrivalTime) {
+        return [General stringFromTimeInterval:_arrivalTime];
+    } else {
+        return @"";
+    }
+}
+
 -(id)initWithDepartureTime:(NSTimeInterval)departureTime arrivalTime:(NSTimeInterval)arrivalTime busNumber:(NSString *)busNumber type:(NSString *)type{
     self = [super init];
     

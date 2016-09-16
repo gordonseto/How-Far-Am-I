@@ -11,7 +11,11 @@
 @implementation General
 
 +(NSString*)stringFromTimeInterval:(NSTimeInterval)time{
-    return @"";
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"h:mm a"];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:time ];
+    NSString *resultString = [dateFormatter stringFromDate: date];
+    return resultString;
 }
 
 @end

@@ -29,6 +29,16 @@
 -(void)getEarliestDirectionFromCurrentLocation:(CLLocation*)currentLocation completion:(void (^)(Direction*)) completionHandler{
     [self getDirectionsFromLocation:currentLocation completion:^(NSMutableArray *directions) {
         if  (self.directions != nil && self.directions.count > 0) {
+            for (Direction *direction in directions){
+                NSLog(direction.arrivalString);
+            }
+            NSLog(@"sorted:");
+            self.directions = [self.directions sortedArrayUsingComparator:^NSComparisonResult(Direction *d1, Direction *d2) {
+                return d1.arrivalTime < d2.arrivalTime;
+            }];
+            for (Direction *direction in directions){
+                NSLog(direction.arrivalString);
+            }
             completionHandler([directions objectAtIndex:0]);
         }
     }];

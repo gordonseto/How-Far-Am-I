@@ -7,6 +7,7 @@
 //
 
 #import "LocationCell.h"
+#import "General.h"
 
 @implementation LocationCell
 
@@ -21,11 +22,11 @@
     }
     [location getEarliestDirectionFromCurrentLocation:currentLocation completion:^(Direction *direction) {
         if (direction != nil) {
-            self.timeLabel.text = [NSString stringWithFormat:@"%f", direction.duration];
+            self.timeLabel.text = direction.arrivalString;
             if ([direction.type  isEqual: @"WALKING"]) {
                 self.busLabel.text = @"Walking";
             } else {
-                self.busLabel.text = [NSString stringWithFormat:@"By %@ At %f", direction.busNumber,direction.departureTime];
+                self.busLabel.text = [NSString stringWithFormat:@"By %@ At %@", direction.busNumber, direction.departureString];
             }
         }
     }];
